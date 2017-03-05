@@ -1,0 +1,8 @@
+{% extends './layout.html' %}
+{% block content %}
+
+<h2> ERROR: {{ status }} </h3>
+<pre><code>
+  {{ error.stack }}
+</code></pre>
+{% endblock %}

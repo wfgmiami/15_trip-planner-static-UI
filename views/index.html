@@ -1,0 +1,9 @@
+{% extends './layout.html' %}
+
+{% block content %}
+{{ hotels.length }} - {{ activities.length }} - {{ restaurants.length }}
+
+ {% for restaurant in restaurants %}
+  {{ restaurant.name }}
+ {% endfor %}
+{% endblock %}
