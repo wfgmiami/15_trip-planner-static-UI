@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "start:production": "node app",
+    "start:dev": "nodemon -e html,css,js app",
+    "start": "npm run start:dev",
+    "build-sass":"node-sass -w -r assets/stylesheets -o public/stylesheets"
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,8 @@
     "pg": "^6.1.2",
     "sequelize": "^3.30.2",
     "volleyball": "^1.4.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0"
   }
 }
